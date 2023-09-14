@@ -1,0 +1,92 @@
+﻿@page
+@model CvApplication.Pages.Cvs.BrowsingModel
+@{
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">List Of Applications</h2>
+        </div>
+
+
+        <!--<form method="get">
+
+            <label> <h6>Search By Gender</h6></label>
+            <div class="form-group">
+                <input type="text" class="form-control" asp-for="SearchCountry" placeholder="Enter Counter Name Starting with Capital Letter Ex:Lebanon" />
+            </div>
+            <label> <h6> Search By Blood Group </h6></label>
+            <div class="form-group">
+                <input type="text" class="form-control" asp-for="BloodGroup" placeholder="Ex: AB+ or A- " />
+            </div>
+            <br>
+            <button type="submit" class="btn btn-outline-danger">Search</button>
+
+        </form> -->
+
+        <div class="col-6">
+        </div>
+    </div>
+
+    <br /><br />
+
+
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th class="text-white">
+                    First Name :
+                </th>
+                <th class="text-white">
+                    Last Name :
+                </th>
+                <th class="text-white">
+                    Email:
+                </th>
+                <th class="text-white">
+                    Gender
+                </th>
+                <th class="text-white">
+                    Grade
+                </th>
+                <th class="text-white">
+
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            @foreach (var user in Model.App)
+            {
+                <tr>
+                    <td>
+                        @user.FirstName
+                    </td>
+                    <td>
+                        @user.LastName
+                    </td>
+                    <td>
+                        @user.Email
+                    </td>
+                    <td>
+                        @user.Gender
+                    </td>
+                    <td>
+                       @user.Grade
+                    </td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@user.Id" class="brick-link">Edit</a> |
+                        <a asp-page="Details" asp-route-id="@user.Id" class="brick-link">Details</a> |
+                        <a asp-page="Delete" asp-route-id="@user.Id" class="brick-link">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<p>
+    <a asp-page="/Index" class="brick-link">Back To Home Page</a>
+</p>

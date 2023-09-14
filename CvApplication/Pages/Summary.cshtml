@@ -1,0 +1,81 @@
+﻿@page
+@model CvApplication.Pages.SummaryModel
+@{
+}
+
+<h1>Thank You @Model.Input.FirstName For Submmiting </h1>
+
+<
+<table class="table">
+    <thead>
+        <tr class="table-black">
+            <th class="text-black">
+                First Name
+            </th>
+
+            <th class="text-black">
+                Last Name
+            </th>
+            <th class="text-black">
+                BirthDay Date
+            </th>
+            <th class="text-black">
+                Nationality
+            </th>
+            <th class="text-black">
+                Gender
+            </th>
+            <th class="text-black">
+                Skills
+            </th>
+            <th class="text-black">
+                Email
+            </th>
+
+            <th class="text-black">
+                Photo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+        <tr>
+            <td>
+                @Model.Input.FirstName
+            </td>
+            <td>
+                @Model.Input.LastName
+            </td>
+            <td>
+                @Model.Input.Date
+            </td>
+            <td>
+                @Model.Input.Nationality
+            </td>
+            <td>
+                @Model.Input.Gender
+            </td>
+            <td>
+               
+            </td>
+
+            <td>
+                @Model.Input.Email
+            </td>
+
+            <td>
+                @Model.Input.Photo
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<img src="https://th.bing.com/th/id/OIG.VokSAjwZKj8xOTQtsx_V?pid=ImgGn" height="400" width="600" />
+
+<p>
+    <a asp-page="Index" class="brick-link">Back To Home Page</a>
+</p>

@@ -1,0 +1,132 @@
+﻿@page
+@model CvApplication.Pages.Cvs.ApplyModel
+@{
+}
+
+<h1> Please Fill This Form</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" class="large-form" enctype="multipart/form-data">
+            <!--  <div asp-validation-summary="All" class="text-danger"></div>-->
+            <div class="form-group">
+                <label asp-for="Input.FirstName"> </label>
+                <input class="form-control" asp-for="Input.FirstName" />
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.LastName"> </label>
+                <input class="form-control" asp-for="Input.LastName" />
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.Date"> Date </label>
+                <input class="form-control" asp-for="Input.Date" />
+                <span asp-validation-for="Input.Date" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Input.Nationality"> </label>
+                <select class="form-control" asp-for="Input.Nationality" asp-items="Model.Nationality">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Input.Gender"> </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Male" asp-for="Input.Gender" checked>
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="Female" asp-for="Input.Gender">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <br />
+            <h5>Skills:</h5>
+            <div class="form-group">
+                <div class="form-check">
+                    <label asp-for="Input.Java"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.Java" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.C"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.C" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.SQL"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.SQL" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.dotnet"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.dotnet" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.PHP"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.PHP" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Mips"></label>
+                    <input class="form-check-input" type="checkbox" asp-for="Input.Mips" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Email"> </label>
+                    <input class="form-control" asp-for="Input.Email" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.CnEmail"> </label>
+                    <input class="form-control" asp-for="Input.CnEmail" />
+                    <span asp-validation-for="Input.CnEmail" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Input.Photo"> </label>
+                <input class="form-control" asp-for="Input.Photo" />
+                <span asp-validation-for="Input.Photo" class="text-danger"></span>
+            </div>
+            <br />
+            <h4>Verification Code </h4>
+            <div classs="form-group">
+                <label asp-for="Input.X"> </label>
+                <input class="form-control" asp-for="Input.X" />
+                <span asp-validation-for="Input.X" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Y"> </label>
+                <input class="form-control" asp-for="Input.Y" />
+                <span asp-validation-for="Input.Y" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Sum"> </label>
+                <input class="form-control" asp-for="Input.Sum" />
+                <span asp-validation-for="Input.Sum" class="text-danger"></span>
+            </div>
+
+
+            <br />
+            <input type="Submit" value="Send" class="btn btn-dark" />
+
+
+
+        </form>
+
+    </div>
+    <div class="col-md-6">
+        <img src="https://th.bing.com/th/id/OIG.pPRLYBfawoAkuwmtT5aw?pid=ImgGn" height="900" width="500"
+             style=" display: block; margin: 0 auto; margin-left: 60px;" />
+    </div>
+
+    <p>
+        <a asp-page="/Index" class="brick-link">Back To Home Page</a>
+    </p>
+
+
+
+</div>
